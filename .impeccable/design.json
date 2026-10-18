@@ -1,0 +1,504 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T23:49:30+00:00",
+  "title": "Design System: Residential Plumbing, New Jersey",
+  "extensions": {
+    "colorMeta": {
+      "copper": {
+        "role": "primary",
+        "displayName": "Sweat-Soldered Copper",
+        "canonical": "#d68b55",
+        "tonalRamp": [
+          "oklch(15% 0.115 55)",
+          "oklch(26% 0.115 55)",
+          "oklch(38% 0.115 55)",
+          "oklch(49% 0.115 55)",
+          "oklch(61% 0.115 55)",
+          "oklch(72% 0.115 55)",
+          "oklch(84% 0.115 55)",
+          "oklch(95% 0.115 55)"
+        ]
+      },
+      "copper-hi": {
+        "role": "primary",
+        "displayName": "Polished Copper",
+        "canonical": "#efb183",
+        "tonalRamp": [
+          "oklch(15% 0.095 57)",
+          "oklch(26% 0.095 57)",
+          "oklch(38% 0.095 57)",
+          "oklch(49% 0.095 57)",
+          "oklch(61% 0.095 57)",
+          "oklch(72% 0.095 57)",
+          "oklch(84% 0.095 57)",
+          "oklch(95% 0.095 57)"
+        ]
+      },
+      "copper-lo": {
+        "role": "primary",
+        "displayName": "Oxidized Copper",
+        "canonical": "#9a5329",
+        "tonalRamp": [
+          "oklch(15% 0.110 49)",
+          "oklch(26% 0.110 49)",
+          "oklch(38% 0.110 49)",
+          "oklch(49% 0.110 49)",
+          "oklch(61% 0.110 49)",
+          "oklch(72% 0.110 49)",
+          "oklch(84% 0.110 49)",
+          "oklch(95% 0.110 49)"
+        ]
+      },
+      "aqua": {
+        "role": "secondary",
+        "displayName": "Pool Aqua",
+        "canonical": "#1f8fb0",
+        "tonalRamp": [
+          "oklch(15% 0.105 223)",
+          "oklch(26% 0.105 223)",
+          "oklch(38% 0.105 223)",
+          "oklch(49% 0.105 223)",
+          "oklch(61% 0.105 223)",
+          "oklch(72% 0.105 223)",
+          "oklch(84% 0.105 223)",
+          "oklch(95% 0.105 223)"
+        ]
+      },
+      "aqua-hi": {
+        "role": "secondary",
+        "displayName": "Surface Light Aqua",
+        "canonical": "#6fd0e6",
+        "tonalRamp": [
+          "oklch(15% 0.096 214)",
+          "oklch(26% 0.096 214)",
+          "oklch(38% 0.096 214)",
+          "oklch(49% 0.096 214)",
+          "oklch(61% 0.096 214)",
+          "oklch(72% 0.096 214)",
+          "oklch(84% 0.096 214)",
+          "oklch(95% 0.096 214)"
+        ]
+      },
+      "navy": {
+        "role": "neutral",
+        "displayName": "Night Water Navy",
+        "canonical": "#0e2a3b",
+        "tonalRamp": [
+          "oklch(15% 0.046 238)",
+          "oklch(26% 0.046 238)",
+          "oklch(38% 0.046 238)",
+          "oklch(49% 0.046 238)",
+          "oklch(61% 0.046 238)",
+          "oklch(72% 0.046 238)",
+          "oklch(84% 0.046 238)",
+          "oklch(95% 0.046 238)"
+        ]
+      },
+      "navy-2": {
+        "role": "neutral",
+        "displayName": "Pipe-Run Navy",
+        "canonical": "#123447",
+        "tonalRamp": [
+          "oklch(15% 0.052 236)",
+          "oklch(26% 0.052 236)",
+          "oklch(38% 0.052 236)",
+          "oklch(49% 0.052 236)",
+          "oklch(61% 0.052 236)",
+          "oklch(72% 0.052 236)",
+          "oklch(84% 0.052 236)",
+          "oklch(95% 0.052 236)"
+        ]
+      },
+      "deep": {
+        "role": "neutral",
+        "displayName": "Deep Water",
+        "canonical": "#0b4a63",
+        "tonalRamp": [
+          "oklch(15% 0.072 231)",
+          "oklch(26% 0.072 231)",
+          "oklch(38% 0.072 231)",
+          "oklch(49% 0.072 231)",
+          "oklch(61% 0.072 231)",
+          "oklch(72% 0.072 231)",
+          "oklch(84% 0.072 231)",
+          "oklch(95% 0.072 231)"
+        ]
+      },
+      "porcelain": {
+        "role": "neutral",
+        "displayName": "Porcelain",
+        "canonical": "#eef3f4",
+        "tonalRamp": [
+          "oklch(15% 0.006 211)",
+          "oklch(26% 0.006 211)",
+          "oklch(38% 0.006 211)",
+          "oklch(49% 0.006 211)",
+          "oklch(61% 0.006 211)",
+          "oklch(72% 0.006 211)",
+          "oklch(84% 0.006 211)",
+          "oklch(95% 0.006 211)"
+        ]
+      },
+      "porcelain-2": {
+        "role": "neutral",
+        "displayName": "Porcelain Shadow",
+        "canonical": "#dfe8ea",
+        "tonalRamp": [
+          "oklch(15% 0.010 213)",
+          "oklch(26% 0.010 213)",
+          "oklch(38% 0.010 213)",
+          "oklch(49% 0.010 213)",
+          "oklch(61% 0.010 213)",
+          "oklch(72% 0.010 213)",
+          "oklch(84% 0.010 213)",
+          "oklch(95% 0.010 213)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Fixture Grey-Blue",
+        "canonical": "#7d939d",
+        "tonalRamp": [
+          "oklch(15% 0.029 227)",
+          "oklch(26% 0.029 227)",
+          "oklch(38% 0.029 227)",
+          "oklch(49% 0.029 227)",
+          "oklch(61% 0.029 227)",
+          "oklch(72% 0.029 227)",
+          "oklch(84% 0.029 227)",
+          "oklch(95% 0.029 227)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#10232e",
+        "tonalRamp": [
+          "oklch(15% 0.033 236)",
+          "oklch(26% 0.033 236)",
+          "oklch(38% 0.033 236)",
+          "oklch(49% 0.033 236)",
+          "oklch(61% 0.033 236)",
+          "oklch(72% 0.033 236)",
+          "oklch(84% 0.033 236)",
+          "oklch(95% 0.033 236)"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "#3c5664",
+        "tonalRamp": [
+          "oklch(15% 0.039 232)",
+          "oklch(26% 0.039 232)",
+          "oklch(38% 0.039 232)",
+          "oklch(49% 0.039 232)",
+          "oklch(61% 0.039 232)",
+          "oklch(72% 0.039 232)",
+          "oklch(84% 0.039 232)",
+          "oklch(95% 0.039 232)"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "#c9dbe2",
+        "tonalRamp": [
+          "oklch(15% 0.022 223)",
+          "oklch(26% 0.022 223)",
+          "oklch(38% 0.022 223)",
+          "oklch(49% 0.022 223)",
+          "oklch(61% 0.022 223)",
+          "oklch(72% 0.022 223)",
+          "oklch(84% 0.022 223)",
+          "oklch(95% 0.022 223)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.000 90)",
+          "oklch(26% 0.000 90)",
+          "oklch(38% 0.000 90)",
+          "oklch(49% 0.000 90)",
+          "oklch(61% 0.000 90)",
+          "oklch(72% 0.000 90)",
+          "oklch(84% 0.000 90)",
+          "oklch(95% 0.000 90)"
+        ]
+      },
+      "error": {
+        "role": "error",
+        "displayName": "Error Brick",
+        "canonical": "#a3321f",
+        "tonalRamp": [
+          "oklch(15% 0.140 32)",
+          "oklch(26% 0.140 32)",
+          "oklch(38% 0.140 32)",
+          "oklch(49% 0.140 32)",
+          "oklch(61% 0.140 32)",
+          "oklch(72% 0.140 32)",
+          "oklch(84% 0.140 32)",
+          "oklch(95% 0.140 32)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero line only, about 9ch, uppercase."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles, uppercase."
+      },
+      "quote": {
+        "displayName": "Closing Quote",
+        "purpose": "The closing quality line, uppercase, about 18ch."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Step titles, uppercase."
+      },
+      "list-item": {
+        "displayName": "List Item",
+        "purpose": "Service rows, sentence case."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All paragraphs, 34 to 44ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form legends and labels."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Button text, sentence case."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Notes, errors (700), footer."
+      }
+    },
+    "shadows": [
+      {
+        "name": "field-focus-halo",
+        "value": "0 0 0 3px rgba(31,143,176,.25)",
+        "purpose": "Only shadow in the system: focused text fields."
+      }
+    ],
+    "focus": [
+      {
+        "name": "focus-dark",
+        "value": "outline: 3px solid #6fd0e6; outline-offset: 3px",
+        "purpose": "Focus ring on navy grounds."
+      },
+      {
+        "name": "focus-light",
+        "value": "outline: 3px solid #1f8fb0; outline-offset: 3px",
+        "purpose": "Focus ring on porcelain grounds and on form buttons at hover."
+      }
+    ],
+    "gradients": [
+      {
+        "name": "hero-water",
+        "value": "linear-gradient(180deg,#0e2a3b 0%,#0f3346 60%,#0b4a63 100%)",
+        "purpose": "Hero ground, navy to deep water."
+      },
+      {
+        "name": "close-water",
+        "value": "linear-gradient(180deg,#0b4a63,#0e2a3b 85%)",
+        "purpose": "Closing section ground."
+      },
+      {
+        "name": "copper-pipe",
+        "value": "linear-gradient(90deg,#6e3818,#c47a45 30%,#f3c39a 45%,#b8693a 70%,#6e3818)",
+        "purpose": "Copper pipe body; rotate 180deg for horizontal runs."
+      },
+      {
+        "name": "copper-coupling",
+        "value": "linear-gradient(90deg,#b8693a,#d68b55 28%,#f6cba6 46%,#d68b55 66%,#b8693a)",
+        "purpose": "Step number couplings."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-transition",
+        "value": "background .2s, border-color .2s, color .2s",
+        "purpose": "Buttons and arrow discs."
+      },
+      {
+        "name": "field-transition",
+        "value": "border-color .15s",
+        "purpose": "Chips and fields."
+      },
+      {
+        "name": "press",
+        "value": "transform: scale(.98) over .15s",
+        "purpose": "Button active state."
+      },
+      {
+        "name": "seam-speed",
+        "value": "1.9",
+        "purpose": "CFG.SEAM_SPEED multiplier for the water seam waves; all ambient motion runs on one shared rAF loop, pauses off screen, and is static under prefers-reduced-motion."
+      },
+      {
+        "name": "drip-every",
+        "value": "1500ms",
+        "purpose": "CFG.DRIP_EVERY, interval between drips while the valve is open."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs",
+        "value": "379px (max)"
+      },
+      {
+        "name": "sm",
+        "value": "480px"
+      },
+      {
+        "name": "md",
+        "value": "760px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Copper pill for every primary action; navy text.",
+      "html": "<a class=\"ds-btn ds-btn-fill\" href=\"#\">Get a free estimate</a>",
+      "css": ":host{--navy:#0e2a3b;--navy-2:#123447;--deep:#0b4a63;--porcelain:#eef3f4;--porcelain-2:#dfe8ea;--line:#7d939d;--ink:#10232e;--ink-soft:#3c5664;--mist:#c9dbe2;--copper:#d68b55;--copper-hi:#efb183;--copper-lo:#9a5329;--aqua:#1f8fb0;--aqua-hi:#6fd0e6;--radius:14px;--font:-apple-system,BlinkMacSystemFont,\"SF Pro Display\",\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:999px;border:2px solid var(--copper);font:800 17px/1 var(--font);text-decoration:none;cursor:pointer;transition:background .2s,border-color .2s,color .2s,transform .15s}.ds-btn:active{transform:scale(.98)}.ds-btn-fill{background:var(--copper);color:var(--navy)}.ds-btn-fill:hover{background:var(--copper-hi);border-color:var(--copper-hi)}.ds-btn-fill:focus-visible{outline:3px solid var(--aqua-hi);outline-offset:3px}"
+    },
+    {
+      "name": "Outline Button on Dark",
+      "kind": "button",
+      "refersTo": "button-outline-dark",
+      "description": "Secondary action on navy grounds (Text us a photo).",
+      "html": "<div class=\"ds-dark\"><a class=\"ds-btn ds-btn-line\" href=\"#\">Text us a photo</a></div>",
+      "css": ":host{--navy:#0e2a3b;--navy-2:#123447;--deep:#0b4a63;--porcelain:#eef3f4;--porcelain-2:#dfe8ea;--line:#7d939d;--ink:#10232e;--ink-soft:#3c5664;--mist:#c9dbe2;--copper:#d68b55;--copper-hi:#efb183;--copper-lo:#9a5329;--aqua:#1f8fb0;--aqua-hi:#6fd0e6;--radius:14px;--font:-apple-system,BlinkMacSystemFont,\"SF Pro Display\",\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:999px;border:2px solid var(--copper);font:800 17px/1 var(--font);text-decoration:none;cursor:pointer;transition:background .2s,border-color .2s,color .2s,transform .15s}.ds-btn:active{transform:scale(.98)}.ds-dark{background:var(--navy);padding:20px}.ds-btn-line{background:transparent;color:#fff;border-color:rgba(255,255,255,.75)}.ds-btn-line:hover{border-color:#fff;background:rgba(255,255,255,.08)}.ds-btn-line:focus-visible{outline:3px solid var(--aqua-hi);outline-offset:3px}"
+    },
+    {
+      "name": "Choice Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Radio chip in the estimate form; navy when selected, aqua on hover and focus.",
+      "html": "<div class=\"ds-chips\"><label class=\"ds-chip\"><input type=\"radio\" name=\"ds-s\" checked><span>Leak</span></label><label class=\"ds-chip\"><input type=\"radio\" name=\"ds-s\"><span>Drain or clog</span></label><label class=\"ds-chip\"><input type=\"radio\" name=\"ds-s\"><span>Toilet</span></label></div>",
+      "css": ":host{--navy:#0e2a3b;--navy-2:#123447;--deep:#0b4a63;--porcelain:#eef3f4;--porcelain-2:#dfe8ea;--line:#7d939d;--ink:#10232e;--ink-soft:#3c5664;--mist:#c9dbe2;--copper:#d68b55;--copper-hi:#efb183;--copper-lo:#9a5329;--aqua:#1f8fb0;--aqua-hi:#6fd0e6;--radius:14px;--font:-apple-system,BlinkMacSystemFont,\"SF Pro Display\",\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-chips{display:flex;flex-wrap:wrap;gap:10px;background:var(--porcelain);padding:20px;font-family:var(--font)}.ds-chip{position:relative}.ds-chip input{position:absolute;opacity:0;width:1px;height:1px;margin:0}.ds-chip span{display:flex;align-items:center;min-height:46px;padding:0 16px;border-radius:999px;background:#fff;border:2px solid var(--line);color:var(--ink);font-weight:700;font-size:16px;cursor:pointer;transition:border-color .15s,background .15s,color .15s}.ds-chip span:hover{border-color:var(--aqua)}.ds-chip input:focus-visible+span{border-color:var(--aqua);outline:3px solid var(--aqua);outline-offset:2px}.ds-chip input:checked+span{background:var(--navy);border-color:var(--navy);color:#fff}.ds-chip input:checked+span:hover{border-color:var(--aqua);outline:2px solid var(--aqua);outline-offset:2px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "White field with a 2px edge that turns aqua on hover and focus.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-lbl\" for=\"ds-name\">Your name</label><input class=\"ds-input\" id=\"ds-name\" type=\"text\" placeholder=\"e.g. Edison\"></div>",
+      "css": ":host{--navy:#0e2a3b;--navy-2:#123447;--deep:#0b4a63;--porcelain:#eef3f4;--porcelain-2:#dfe8ea;--line:#7d939d;--ink:#10232e;--ink-soft:#3c5664;--mist:#c9dbe2;--copper:#d68b55;--copper-hi:#efb183;--copper-lo:#9a5329;--aqua:#1f8fb0;--aqua-hi:#6fd0e6;--radius:14px;--font:-apple-system,BlinkMacSystemFont,\"SF Pro Display\",\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-field{background:var(--porcelain);padding:20px;font-family:var(--font)}.ds-lbl{display:block;font-weight:800;font-size:16px;margin-bottom:10px;color:var(--ink)}.ds-input{width:100%;font:500 17px/1.4 var(--font);color:var(--ink);background:#fff;border:2px solid var(--line);border-radius:12px;padding:14px 16px;min-height:54px;transition:border-color .15s;caret-color:var(--copper-lo)}.ds-input::placeholder{color:#5f7784}.ds-input:hover{border-color:var(--aqua)}.ds-input:focus{outline:none;border-color:var(--aqua);box-shadow:0 0 0 3px rgba(31,143,176,.25)}"
+    },
+    {
+      "name": "Header Bar",
+      "kind": "nav",
+      "description": "Brand mark left, phone number top-right; not sticky.",
+      "html": "<header class=\"ds-bar\"><a class=\"ds-brand\" href=\"#\"><svg viewBox=\"0 0 64 64\" width=\"30\" height=\"30\" aria-hidden=\"true\"><path d=\"M32 6S13 29 13 41a19 19 0 0 0 38 0C51 29 32 6 32 6z\" fill=\"#d68b55\"/><path d=\"M24 42a8 8 0 0 0 8 8\" stroke=\"#0e2a3b\" stroke-width=\"4.5\" fill=\"none\" stroke-linecap=\"round\"/></svg><span><b>Residential Plumbing</b><small>New Jersey · 24/7</small></span></a><a class=\"ds-tel\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z\"/></svg>(862) 400-0703</a></header>",
+      "css": ":host{--navy:#0e2a3b;--navy-2:#123447;--deep:#0b4a63;--porcelain:#eef3f4;--porcelain-2:#dfe8ea;--line:#7d939d;--ink:#10232e;--ink-soft:#3c5664;--mist:#c9dbe2;--copper:#d68b55;--copper-hi:#efb183;--copper-lo:#9a5329;--aqua:#1f8fb0;--aqua-hi:#6fd0e6;--radius:14px;--font:-apple-system,BlinkMacSystemFont,\"SF Pro Display\",\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;background:var(--navy);color:#fff;font-family:var(--font)}.ds-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;min-height:44px}.ds-brand b{display:block;font-weight:900;text-transform:uppercase;font-size:15px;line-height:1.05;letter-spacing:.01em}.ds-brand small{display:block;font-size:13px;color:var(--mist);letter-spacing:.02em}.ds-tel{display:flex;align-items:center;gap:8px;min-height:44px;font-weight:800;font-size:16px;color:inherit;text-decoration:none;font-variant-numeric:tabular-nums;white-space:nowrap}.ds-tel svg{color:var(--copper)}.ds-tel:hover{color:var(--copper-hi)}.ds-tel:focus-visible,.ds-brand:focus-visible{outline:3px solid var(--aqua-hi);outline-offset:3px;border-radius:6px}"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "refersTo": "service-row",
+      "description": "List row whose only hover change is the arrow disc turning copper.",
+      "html": "<ul class=\"ds-rows\"><li><a class=\"ds-row\" href=\"#\">Leak repairs<span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a></li><li><a class=\"ds-row\" href=\"#\">Water heaters<span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a></li></ul>",
+      "css": ":host{--navy:#0e2a3b;--navy-2:#123447;--deep:#0b4a63;--porcelain:#eef3f4;--porcelain-2:#dfe8ea;--line:#7d939d;--ink:#10232e;--ink-soft:#3c5664;--mist:#c9dbe2;--copper:#d68b55;--copper-hi:#efb183;--copper-lo:#9a5329;--aqua:#1f8fb0;--aqua-hi:#6fd0e6;--radius:14px;--font:-apple-system,BlinkMacSystemFont,\"SF Pro Display\",\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-rows{list-style:none;margin:0;padding:20px;background:var(--porcelain);font-family:var(--font)}.ds-rows li:first-child .ds-row{border-top:1px solid var(--porcelain-2)}.ds-row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:10px 2px;border-bottom:1px solid var(--porcelain-2);color:var(--ink);text-decoration:none;font-weight:800;font-size:20px;letter-spacing:-.01em}.ds-row:hover,.ds-row:focus-visible{outline:none;background:none}.ds-arrow{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--porcelain-2);color:var(--ink);flex:none;transition:background .2s,color .2s}.ds-row:hover .ds-arrow,.ds-row:focus-visible .ds-arrow{background:var(--copper);color:var(--navy)}.ds-row:focus-visible .ds-arrow{outline:3px solid var(--aqua);outline-offset:3px}"
+    },
+    {
+      "name": "Copper Pipe Steps",
+      "kind": "custom",
+      "description": "Numbered steps strung on a copper pipe, numbers in copper couplings.",
+      "html": "<ol class=\"ds-steps\"><li class=\"ds-step\"><span class=\"ds-n\">1</span><div><h3>Call or text</h3><p>Any hour, any day.</p></div></li><li class=\"ds-step\"><span class=\"ds-n\">2</span><div><h3>Free estimate</h3><p>You know the price before we start.</p></div></li></ol>",
+      "css": ":host{--navy:#0e2a3b;--navy-2:#123447;--deep:#0b4a63;--porcelain:#eef3f4;--porcelain-2:#dfe8ea;--line:#7d939d;--ink:#10232e;--ink-soft:#3c5664;--mist:#c9dbe2;--copper:#d68b55;--copper-hi:#efb183;--copper-lo:#9a5329;--aqua:#1f8fb0;--aqua-hi:#6fd0e6;--radius:14px;--font:-apple-system,BlinkMacSystemFont,\"SF Pro Display\",\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-steps{list-style:none;margin:0;padding:24px 20px;position:relative;background:var(--navy-2);color:#fff;font-family:var(--font)}.ds-steps::before{content:'';position:absolute;left:41px;top:46px;bottom:46px;width:12px;border-radius:6px;background:linear-gradient(90deg,#6e3818,#c47a45 30%,#f3c39a 45%,#b8693a 70%,#6e3818)}.ds-step{position:relative;display:grid;grid-template-columns:54px 1fr;gap:18px;padding:0 0 34px}.ds-step:last-child{padding-bottom:0}.ds-n{position:relative;justify-self:center;width:34px;height:46px;border-radius:5px;display:grid;place-items:center;font-weight:900;font-size:20px;color:var(--navy);background:linear-gradient(90deg,#b8693a,#d68b55 28%,#f6cba6 46%,#d68b55 66%,#b8693a)}.ds-n::before,.ds-n::after{content:'';position:absolute;left:-2px;right:-2px;height:5px;border-radius:3px;background:linear-gradient(90deg,#6e3818,#b8693a 30%,#e9b088 46%,#a65d30 70%,#6e3818)}.ds-n::before{top:-1px}.ds-n::after{bottom:-1px}.ds-step h3{margin:4px 0 0;font-size:24px;font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:1.05}.ds-step p{margin:8px 0 0;color:var(--mist);line-height:1.55}"
+    },
+    {
+      "name": "Water Seam",
+      "kind": "custom",
+      "description": "Wave boundary between sections (static frame; animated live on a shared loop).",
+      "html": "<div class=\"ds-seam\"><svg viewBox=\"0 0 1000 60\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path fill=\"#eef3f4\" d=\"M0 30 C200 18 300 42 500 30 S800 18 1000 30 L1000 62 L0 62Z\"/><path fill=\"none\" stroke=\"rgba(111,208,230,.55)\" stroke-width=\"2\" vector-effect=\"non-scaling-stroke\" d=\"M0 21 C200 12 300 32 500 21 S800 12 1000 21\"/><path fill=\"none\" stroke=\"#2c93ae\" stroke-width=\"3.2\" vector-effect=\"non-scaling-stroke\" d=\"M0 30 C200 18 300 42 500 30 S800 18 1000 30\"/><path fill=\"none\" stroke=\"rgba(191,230,238,.7)\" stroke-width=\"1.6\" vector-effect=\"non-scaling-stroke\" d=\"M0 39 C200 30 300 48 500 39 S800 30 1000 39\"/></svg></div>",
+      "css": ".ds-seam{display:block;width:100%;height:70px;background:#0b4a63}.ds-seam svg{display:block;width:100%;height:100%}"
+    },
+    {
+      "name": "Display Heading",
+      "kind": "custom",
+      "description": "Heavy uppercase system-stack heading on navy, with mist tagline.",
+      "html": "<div class=\"ds-hero\"><h1>More than a quick fix.</h1><p>Professional plumbing. Dependable solutions. Exceptional care.</p></div>",
+      "css": ":host{--navy:#0e2a3b;--navy-2:#123447;--deep:#0b4a63;--porcelain:#eef3f4;--porcelain-2:#dfe8ea;--line:#7d939d;--ink:#10232e;--ink-soft:#3c5664;--mist:#c9dbe2;--copper:#d68b55;--copper-hi:#efb183;--copper-lo:#9a5329;--aqua:#1f8fb0;--aqua-hi:#6fd0e6;--radius:14px;--font:-apple-system,BlinkMacSystemFont,\"SF Pro Display\",\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-hero{background:linear-gradient(180deg,var(--navy),#0f3346 60%,var(--deep));color:#fff;padding:28px 20px;font-family:var(--font)}.ds-hero h1{margin:0;font-size:clamp(46px,13.6vw,104px);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:.98;max-width:9ch}.ds-hero p{margin:18px 0 0;font-size:20px;line-height:1.55;color:var(--mist);max-width:34ch}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Still Water and Sweat-Soldered Copper",
+    "overview": "**Creative North Star: \"Still Water and Sweat-Soldered Copper\"**\n\nThe system is built from the trade's own materials. Dark sections are water at depth: a navy ground that deepens toward teal at the bottom of the hero, where a live canvas surface swells, bubbles, and takes a drip from a copper line. Light sections are porcelain fixtures: cool, clean, slightly blue whites with ink text. Copper is the one warm material in the whole world, and it marks everything a homeowner should act on, plus the pipe and the couplings that join the three steps.\n\nType is loud and plain. The owner chose the system font stack with heavy (900) uppercase display headings; it reads like a truck door or a trade flyer, which is the point. Everything else is calm: generous phone-first spacing, flat surfaces, no cards stacked on cards, no ornament that is not water or pipe. Sections are joined by animated water seams, not rules or hard edges.\n\nThe page is phone first and single column until 760px. The phone number sits top-right on the first screen and again, huge, at the close; there is no sticky header and no sticky bottom bar.",
+    "keyCharacteristics": [
+      "Navy-to-deep-water dark grounds alternating with porcelain light sections, joined by animated three-line water seams.",
+      "Copper is the only warm color in the interface; aqua is the interaction color for form controls and focus.",
+      "System font stack, weight 900, uppercase, tight tracking (-0.02em) and sub-1 line height for every heading.",
+      "Pill buttons and chips, softly rounded fields, circles for arrows; no sharp-cornered controls.",
+      "Flat surfaces. Depth comes from gradients of water and the metallic shading of copper, never from drop shadows."
+    ],
+    "rules": [
+      {
+        "name": "The One Warm Metal Rule",
+        "body": "Copper is the only warm color in the interface. It marks actions and pipe; nothing else in the UI is orange, red, yellow or brown, except the error-brick state color on invalid form fields. Illustrated fixtures in the hero canvas (the brass valve body and its red lever) are depictions of real hardware and are exempt; they never become UI colors.",
+        "section": "colors"
+      },
+      {
+        "name": "The Aqua Means Touch Rule",
+        "body": "Aqua appears only where the user is interacting: hover and focus on form controls, focus outlines, selection. It is never a fill for content or decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Heavy Caps Rule",
+        "body": "Every h1, h2, h3 and the closing quote is weight 900, uppercase, -0.02em tracking, line height under 1.1, with balanced wrapping. Buttons, labels, service rows and body stay in sentence case.",
+        "section": "typography"
+      },
+      {
+        "name": "The Number Top-Right Rule",
+        "body": "On the first screen the phone number appears only in the header's top-right corner. The hero carries Get a free estimate and Text us a photo, never a third call button.",
+        "section": "layout"
+      },
+      {
+        "name": "The Nothing Sticks Rule",
+        "body": "No sticky header and no sticky bottom bar. The only sticky element is the estimate heading column on wide screens.",
+        "section": "layout"
+      },
+      {
+        "name": "The Water Not Shadow Rule",
+        "body": "Separate planes with ground color and the animated water seams, never with shadows or cards floating on cards.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use copper (#d68b55) for primary action fills with navy text, and polished copper (#efb183) for their hover.",
+      "Do set every heading in the system stack at weight 900, uppercase, -0.02em, line height under 1.1.",
+      "Do give text fields, chips and buttons inside the form an aqua (#1f8fb0) edge or outline on hover and focus.",
+      "Do keep service rows still on hover and move only the arrow disc to copper.",
+      "Do join sections with the animated water seam, coloured from the upper section to the lower.",
+      "Do keep tap targets at least 44px, and 56px for primary buttons.",
+      "Do pair every text path with a way to call."
+    ],
+    "donts": [
+      "Don't introduce any other warm color into the interface; copper is the only one. The error state and illustrated hardware in the hero canvas are the only exceptions.",
+      "Don't add a sticky header or a sticky bottom call bar.",
+      "Don't put the phone number anywhere on the first screen except the header's top-right.",
+      "Don't swap the system stack for a webfont or lighten or sentence-case the headings; this is the owner's choice.",
+      "Don't use drop shadows or floating cards to separate content.",
+      "Don't use aqua as a decorative or content color.",
+      "Don't add a background, shadow or outline to a whole service row on hover."
+    ]
+  }
+}

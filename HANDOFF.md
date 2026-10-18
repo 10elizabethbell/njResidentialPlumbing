@@ -7,8 +7,9 @@
 - **World:** still water, copper pipe, porcelain-white sections. Navy ground (not black), copper is the only warm color (buttons, pipe, step markers), aqua is the form hover/focus color.
 - **Hero:** "More than a quick fix." (from their own flyer line "Your home deserves more than just a quick fix"), their tagline, two buttons: **Get a free estimate** (to the form) and **Text us a photo** (outlined, `sms:`). Phone number top-right only.
 - **Signature element:** a copper line with a ball valve crosses in from the right and drips into water at the bottom of the first screen. Drag a finger or mouse through the water to make waves (works up, down and sideways; pull-to-refresh is off), bubbles rise and dodge the pointer, drips splash. **Tap the red valve to stop the leak**; tap again to reopen. Animated water lines divide every section on one shared loop. Reduced motion gets a still frame.
-- **Sections:** What we fix (7 short rows, each pre-picks that service in the form) → How it works (call or text, free estimate, fixed properly, on a copper pipe) → Free estimate form → closing line in their words ("quality shouldn't be a luxury…") with Call 24/7 → footer.
-- **Contact:** all `tel:+18624000703`. The form needs service, how soon, name and town, then opens a text with the answers filled in; it also shows the message with a Copy button and a "Call us" link in case texting doesn't work (desktop, or the number doesn't take texts).
+- **Sections:** What we fix (7 short rows, each pre-picks that service in the form) → How it works (call or text, free estimate, fixed properly; numbered sweat couplings on a copper pipe) → Free estimate form → closing line in their words ("quality shouldn't be a luxury…") with the big tap-to-call number → footer (name, area, 24/7).
+- **Contact:** all `tel:+18624000703`. The form needs service, how soon, name and town, then opens a text with the answers filled in; it also shows the message with a Copy button and a "call us" link in case texting doesn't work (desktop, or the number doesn't take texts). Picking "Right now" reveals "Water coming in right now? Calling is fastest: Call us".
+- **Phone once per screen:** header top-right, then the closing section. The footer has no number because it sits on the same screen as the closing one (Ellie's rule against two controls doing the same thing in view). The valve gives a small wiggle every 7 seconds until someone taps it (`CFG.VALVE_HINT`).
 - Favicon and home-screen icon: a copper drop on navy (there is no logo). `og.png` is the hero at 1200x630 for the Facebook preview.
 
 ## Assumptions I made
@@ -43,6 +44,11 @@
 - Before/after sliders (plain copper divider) once pairs exist.
 - A clog you can clear: drag to unblock a drain and watch the water level drop.
 - Name swap as one constant once known.
+
+## Impeccable
+- Ran: finish reviewer (disposition: fix, all 8 items applied or handled here) and a sweep of audit, critique, polish, harden, adapt, optimize, clarify, typeset, layout, colorize, animate, delight, distill, bolder, quieter, overdrive and extract. Skipped live (needs you) and onboard (no first-run flow). DESIGN.md written by the documenter.
+- Not applied on purpose: a generic hero line ("We treat your home like it's our own"); I kept their own tagline. Sticky header and bottom bar, a Call button in the hero, and lighter or sentence-case headings were also skipped because they break your rules.
+- Detector (not degraded): the closing quote's uppercase and tight line height are ignored for `index.html` in `.impeccable/config.json` (house style). `cramped-padding` is ignored too: a false positive, because the static parser can't read `max(var(--pad), env(safe-area-inset-*))`, and the screenshots show 20px gutters. Left standing: `flat-type-hierarchy` (body sizes 15/16/17/20/24). It's yours to tune.
 
 ## Not verified
 - Real-device touch (iPhone/Android, Facebook in-app browser): the drag in the water, the valve tap, and that a drag starting in the water doesn't scroll (intended).

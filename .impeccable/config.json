@@ -20,6 +20,15 @@
         ],
         "createdAt": "2026-10-18T23:46:24.347Z",
         "reason": "builder: the only match is the closing display quote, uppercase by house style (ellie-taste.md)"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T23:47:17.295Z",
+        "reason": "builder: false positive; .wrap pads with max(var(--pad),env(safe-area-inset-*)) which the static parser can't resolve; 390/360/1440 screenshots show 20-40px gutters"
       }
     ]
   }
