@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T23:46:24.278Z",
+        "reason": "builder: closing blockquote is uppercase display type (30-60px) in Ellie's house style (ellie-taste.md: heavy uppercase display headings)"
+      },
+      {
+        "rule": "all-caps-body",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T23:46:24.347Z",
+        "reason": "builder: the only match is the closing display quote, uppercase by house style (ellie-taste.md)"
+      }
+    ]
+  }
+}

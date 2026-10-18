@@ -22,10 +22,9 @@
   --navy:#0e2a3b;        /* page ground, dark sections */
   --navy-2:#123447;      /* how-it-works ground */
   --deep:#0b4a63;        /* deep water, hero bottom */
-  --water:#2c93ae;
-  --foam:#bfe6ee;
   --porcelain:#eef3f4;   /* light sections */
   --porcelain-2:#dfe8ea;
+  --line:#7d939d;        /* form control edges */
   --ink:#10232e;         /* text on porcelain */
   --ink-soft:#3c5664;
   --mist:#c9dbe2;        /* secondary text on navy */
@@ -47,26 +46,26 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--aqua-hi);outline-offset:3px;border-radius:6px}
 h1,h2,h3{margin:0;font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:.98;text-wrap:balance}
 p{margin:0}
-.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 var(--pad)}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 max(var(--pad),env(safe-area-inset-right)) 0 max(var(--pad),env(safe-area-inset-left))}
+.light :focus-visible{outline-color:var(--aqua)}
 
 /* ===== Buttons ===== */
 .btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:999px;border:2px solid var(--copper);font:800 17px/1 var(--font);text-decoration:none;cursor:pointer;transition:background .2s,border-color .2s,color .2s,transform .15s}
 .btn:active{transform:scale(.98)}
 .btn-fill{background:var(--copper);color:var(--navy)}
-.btn-fill:hover{background:var(--copper-hi);border-color:var(--copper-hi)}
+@media (hover:hover){.btn-fill:hover{background:var(--copper-hi);border-color:var(--copper-hi)}}
 .btn-line{background:transparent;color:#fff;border-color:rgba(255,255,255,.75)}
-.btn-line:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+@media (hover:hover){.btn-line:hover{border-color:#fff;background:rgba(255,255,255,.08)}}
 .btn svg{width:20px;height:20px;flex:none}
 
 /* ===== Hero ===== */
 .hero{position:relative;min-height:min(100svh,980px);display:flex;flex-direction:column;background:linear-gradient(180deg,var(--navy) 0%,#0f3346 60%,var(--deep) 100%);overflow:hidden;isolation:isolate}
 .hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px var(--pad);max-width:1180px;width:100%;margin:0 auto}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px max(var(--pad),env(safe-area-inset-right)) 14px max(var(--pad),env(safe-area-inset-left));max-width:1180px;width:100%;margin:0 auto}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-height:44px}
 .brand svg{width:30px;height:30px;flex:none}
 .brand b{display:block;font-weight:900;text-transform:uppercase;font-size:15px;line-height:1.05;letter-spacing:.01em}
-.brand small{display:block;font-size:12px;color:var(--mist);letter-spacing:.02em;white-space:nowrap}
+.brand small{display:block;font-size:13px;color:var(--mist);letter-spacing:.02em;white-space:nowrap}
 @media (max-width:379px){.brand b{font-size:14px}.tel{font-size:15px;gap:6px}}
 .tel{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 4px;font-weight:800;font-size:16px;text-decoration:none;white-space:nowrap;font-variant-numeric:tabular-nums}
 .tel svg{width:18px;height:18px;color:var(--copper);flex:none}
@@ -90,9 +89,10 @@ p{margin:0}
 .row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:10px 2px;border-bottom:1px solid var(--porcelain-2);text-decoration:none;font-weight:800;font-size:20px;letter-spacing:-.01em}
 .services li:first-child .row{border-top:1px solid var(--porcelain-2)}
 .row:hover,.row:focus-visible{outline:none;background:none;box-shadow:none}
+.row:focus-visible .arrow{background:var(--copper);color:var(--navy)}
 .arrow{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--porcelain-2);color:var(--ink);flex:none;transition:background .2s,color .2s}
 .arrow svg{width:18px;height:18px}
-.row:hover .arrow,.row:focus-visible .arrow{background:var(--copper);color:var(--navy)}
+@media (hover:hover){.row:hover .arrow{background:var(--copper);color:var(--navy)}}
 .row:focus-visible .arrow{outline:3px solid var(--aqua);outline-offset:3px}
 
 /* ===== How it works ===== */
@@ -101,7 +101,9 @@ p{margin:0}
 .steps::before{content:"";position:absolute;left:21px;top:22px;bottom:22px;width:12px;border-radius:6px;background:linear-gradient(90deg,#6e3818,#c47a45 30%,#f3c39a 45%,#b8693a 70%,#6e3818)}
 .step{position:relative;display:grid;grid-template-columns:54px 1fr;gap:18px;padding:0 0 34px}
 .step:last-child{padding-bottom:0}
-.step .n{position:relative;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:22px;color:var(--navy);background:radial-gradient(circle at 38% 32%,#f6cba6,#d68b55 55%,#b8693a 100%);box-shadow:0 6px 14px rgba(0,0,0,.28)}
+.step .n{position:relative;justify-self:center;width:34px;height:46px;border-radius:5px;display:grid;place-items:center;font-weight:900;font-size:20px;color:var(--navy);background:linear-gradient(90deg,#b8693a,#d68b55 28%,#f6cba6 46%,#d68b55 66%,#b8693a)}
+.step .n::before,.step .n::after{content:"";position:absolute;left:-2px;right:-2px;height:5px;border-radius:3px;background:linear-gradient(90deg,#6e3818,#b8693a 30%,#e9b088 46%,#a65d30 70%,#6e3818)}
+.step .n::before{top:-1px}.step .n::after{bottom:-1px}
 .step h3{font-size:24px;line-height:1.05;margin-top:4px}
 .step p{margin-top:8px;color:var(--mist);max-width:40ch}
 
@@ -114,23 +116,24 @@ legend,label.lbl{display:block;font-weight:800;font-size:16px;margin-bottom:10px
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chip{position:relative}
 .chip input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
-.chip span{display:flex;align-items:center;min-height:46px;padding:0 16px;border-radius:999px;background:#fff;border:2px solid var(--porcelain-2);font-weight:700;font-size:16px;cursor:pointer;transition:border-color .15s,background .15s,color .15s}
-.chip span:hover,.chip input:focus-visible+span{border-color:var(--aqua)}
+.chip span{display:flex;align-items:center;min-height:46px;padding:0 16px;border-radius:999px;background:#fff;border:2px solid var(--line);font-weight:700;font-size:16px;cursor:pointer;transition:border-color .15s,background .15s,color .15s}
+@media (hover:hover){.chip span:hover{border-color:var(--aqua)}.chip input:checked+span:hover{border-color:var(--aqua);outline:2px solid var(--aqua);outline-offset:2px}}
+.chip input:focus-visible+span{border-color:var(--aqua)}
 .chip input:focus-visible+span{outline:3px solid var(--aqua);outline-offset:2px}
 .chip input:checked+span{background:var(--navy);border-color:var(--navy);color:#fff}
-.chip input:checked+span:hover{border-color:var(--aqua)}
-input[type=text],input[type=tel],textarea{width:100%;font:500 17px/1.4 var(--font);color:var(--ink);background:#fff;border:2px solid var(--porcelain-2);border-radius:12px;padding:14px 16px;min-height:54px;transition:border-color .15s;caret-color:var(--copper-lo)}
+input[type=text],input[type=tel],textarea{width:100%;font:500 17px/1.4 var(--font);color:var(--ink);background:#fff;border:2px solid var(--line);border-radius:12px;padding:14px 16px;min-height:54px;transition:border-color .15s;caret-color:var(--copper-lo)}
 textarea{min-height:110px;resize:vertical}
-input[type=text]:hover,input[type=tel]:hover,textarea:hover{border-color:var(--aqua)}
+@media (hover:hover){input[type=text]:hover,input[type=tel]:hover,textarea:hover{border-color:var(--aqua)}}
 input[type=text]:focus,input[type=tel]:focus,textarea:focus{outline:none;border-color:var(--aqua);box-shadow:0 0 0 3px rgba(31,143,176,.25)}
-::placeholder{color:#6f8794}
+::placeholder{color:#5f7784}
 .err{display:none;margin-top:8px;color:#a3321f;font-weight:700;font-size:15px}
 .bad .err{display:block}
 .bad input,.bad .chip span{border-color:#c0492f}
 .send .btn-fill{width:100%;max-width:420px}
 .send .btn-fill:hover,.send .btn-fill:focus-visible{outline:3px solid var(--aqua);outline-offset:3px}
 .send .note{margin-top:12px;font-size:15px;color:var(--ink-soft)}
-.send .alt{margin-top:6px;font-size:16px}
+.send .alt{display:none;margin-top:6px;font-size:16px}
+.send .alt.on{display:block}
 .send .alt a{font-weight:800;text-underline-offset:3px;display:inline-flex;align-items:center;min-height:44px}
 .sent{display:none;margin-top:4px;padding:18px;border-radius:var(--radius);background:#fff;border:2px solid var(--porcelain-2)}
 .sent.on{display:block}
@@ -141,9 +144,8 @@ input[type=text]:focus,input[type=tel]:focus,textarea:focus{outline:none;border-
 
 /* ===== Close ===== */
 .close{background:linear-gradient(180deg,var(--deep),var(--navy) 85%);text-align:left}
-.close blockquote{margin:0;font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:1.02;font-size:clamp(30px,8.4vw,60px);max-width:18ch;text-wrap:balance}
-.close .area{margin-top:22px;color:var(--mist);font-size:18px}
-.close .big{display:inline-flex;align-items:center;gap:12px;margin-top:22px;font-weight:900;font-size:clamp(30px,9vw,52px);text-decoration:none;font-variant-numeric:tabular-nums;letter-spacing:-.02em;min-height:56px;white-space:nowrap}
+.close blockquote{margin:0;font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:1.06;font-size:clamp(30px,8.4vw,60px);max-width:18ch;text-wrap:balance}
+.close .big{display:inline-flex;align-items:center;gap:12px;margin-top:28px;font-weight:900;font-size:clamp(30px,9vw,52px);text-decoration:none;font-variant-numeric:tabular-nums;letter-spacing:-.02em;min-height:56px;white-space:nowrap}
 .close .big svg{width:.8em;height:.8em;color:var(--copper)}
 .close .big:hover{color:var(--copper-hi)}
 .close .free{margin-top:6px;color:var(--mist)}
@@ -152,8 +154,6 @@ input[type=text]:focus,input[type=tel]:focus,textarea:focus{outline:none;border-
 footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.08);padding:28px 0 calc(28px + env(safe-area-inset-bottom));color:var(--mist);font-size:15px}
 footer .wrap{display:grid;gap:6px}
 footer b{color:#fff;text-transform:uppercase;font-weight:900;letter-spacing:.01em}
-footer a{text-decoration:none;font-weight:700;color:#fff;display:inline-flex;min-height:44px;align-items:center}
-footer a:hover{color:var(--copper-hi)}
 
 /* ===== Larger screens ===== */
 @media (min-width:480px){ .tel{font-size:17px} }
@@ -162,17 +162,22 @@ footer a:hover{color:var(--copper-hi)}
   .seam{height:70px}
   .section{padding:88px 0 96px}
   .hero .actions{grid-template-columns:auto auto;max-width:none;justify-content:start}
-  .services ul{grid-template-columns:1fr 1fr;column-gap:48px}
-  .services li:nth-child(2) .row{border-top:1px solid var(--porcelain-2)}
+  .services ul{grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,auto);grid-auto-flow:column;column-gap:48px}
+  .services li:nth-child(5) .row{border-top:1px solid var(--porcelain-2)}
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
-  .steps::before{left:27px;right:27px;top:21px;bottom:auto;width:auto;height:12px;background:linear-gradient(180deg,#6e3818,#c47a45 30%,#f3c39a 45%,#b8693a 70%,#6e3818)}
+  .steps::before{left:17px;right:17px;top:11px;bottom:auto;width:auto;height:12px;background:linear-gradient(180deg,#6e3818,#c47a45 30%,#f3c39a 45%,#b8693a 70%,#6e3818)}
   .step{grid-template-columns:1fr;gap:16px;padding:0}
+  .step .n{justify-self:start;width:46px;height:34px;background:linear-gradient(180deg,#b8693a,#d68b55 28%,#f6cba6 46%,#d68b55 66%,#b8693a)}
+  .step .n::before,.step .n::after{top:-2px;bottom:-2px;height:auto;width:5px;background:linear-gradient(180deg,#6e3818,#b8693a 30%,#e9b088 46%,#a65d30 70%,#6e3818)}
+  .step .n::before{left:-1px;right:auto}.step .n::after{right:-1px;left:auto}
 }
 @media (min-width:1024px){
   .hero-copy{padding-top:12svh}
   .estimate .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start}
   .estimate form{margin-top:0}
-  .close .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:end}
+  .close .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:end}
+  .close .big{font-size:clamp(30px,3.6vw,52px);margin-top:0}
+  .estimate .grid > div:first-child{position:sticky;top:40px}
 }
 </style>
 </head>
@@ -185,6 +190,7 @@ FIRST VIEWPORT: Header with the number top-right; "More than a quick fix."; tagl
 FORM: Single file, phone first. Canvas water (spring columns + layered swell, bubbles, drip/splash), animated SVG water seams on one shared loop. Estimate form composes a text message.
 seed: c51b7d90
 -->
+<main>
 <section class="hero" id="top">
   <canvas id="water" aria-hidden="true"></canvas>
   <header class="bar">
@@ -233,7 +239,7 @@ seed: c51b7d90
     <ol class="steps">
       <li class="step"><span class="n">1</span><div><h3>Call or text</h3><p>Any hour, any day. Tell us what's leaking, clogged or not working.</p></div></li>
       <li class="step"><span class="n">2</span><div><h3>Free estimate</h3><p>You know the price before we start. Fair, transparent, no surprises.</p></div></li>
-      <li class="step"><span class="n">3</span><div><h3>Fixed properly</h3><p>Repaired the right way, not patched, so it stays fixed.</p></div></li>
+      <li class="step"><span class="n">3</span><div><h3>Fixed properly</h3><p>Quality workmanship on every job, because your home deserves more than a quick fix.</p></div></li>
     </ol>
   </div>
 </section>
@@ -244,10 +250,10 @@ seed: c51b7d90
   <div class="wrap grid">
     <div>
       <h2 id="est-h">Free estimate</h2>
-      <p class="lede">Tell us what's going on. This opens a text with your answers filled in, ready to send.</p>
+      <p class="lede">Your answers go out as a text to us, filled in and ready to send.</p>
     </div>
     <form id="est" novalidate>
-      <fieldset id="f-service">
+      <fieldset id="f-service" aria-describedby="e-service">
         <legend>What needs fixing?</legend>
         <div class="chips">
           <label class="chip"><input type="radio" name="service" value="Leak repairs"><span>Leak</span></label>
@@ -258,38 +264,38 @@ seed: c51b7d90
           <label class="chip"><input type="radio" name="service" value="Kitchen &amp; bath"><span>Kitchen or bath</span></label>
           <label class="chip"><input type="radio" name="service" value="General repairs"><span>Something else</span></label>
         </div>
-        <p class="err">Pick what needs fixing.</p>
+        <p class="err" id="e-service" role="alert">Pick what needs fixing.</p>
       </fieldset>
-      <fieldset id="f-when">
+      <fieldset id="f-when" aria-describedby="e-when">
         <legend>How soon?</legend>
         <div class="chips">
           <label class="chip"><input type="radio" name="when" value="Right now (emergency)"><span>Right now</span></label>
           <label class="chip"><input type="radio" name="when" value="Today"><span>Today</span></label>
           <label class="chip"><input type="radio" name="when" value="This week"><span>This week</span></label>
-          <label class="chip"><input type="radio" name="when" value="Just want an estimate"><span>Just an estimate</span></label>
+          <label class="chip"><input type="radio" name="when" value="No rush, just an estimate"><span>No rush</span></label>
         </div>
-        <p class="err">Pick how soon you need us.</p>
+        <p class="err" id="e-when" role="alert">Pick how soon you need us.</p>
       </fieldset>
       <div>
         <label class="lbl" for="details">What's happening? <span class="opt">(optional)</span></label>
-        <textarea id="details" name="details" placeholder="e.g. Water under the kitchen sink since this morning"></textarea>
+        <textarea id="details" name="details" maxlength="600" placeholder="e.g. Water under the kitchen sink since this morning"></textarea>
       </div>
       <div id="f-name">
         <label class="lbl" for="name">Your name</label>
-        <input type="text" id="name" name="name" autocomplete="name">
-        <p class="err">Add your name so we know who's texting.</p>
+        <input type="text" id="name" name="name" autocomplete="name" aria-describedby="e-name">
+        <p class="err" id="e-name" role="alert">Add your name so we know who's texting.</p>
       </div>
       <div id="f-where">
         <label class="lbl" for="where">Town or address</label>
-        <input type="text" id="where" name="where" autocomplete="street-address" placeholder="e.g. Edison">
-        <p class="err">Add your town so we know where the job is.</p>
+        <input type="text" id="where" name="where" autocomplete="street-address" placeholder="e.g. Edison" aria-describedby="e-where">
+        <p class="err" id="e-where" role="alert">Add your town so we know where the job is.</p>
       </div>
       <div class="send">
         <button class="btn btn-fill" type="submit">Text my free estimate request</button>
-        <p class="note">Opens your messages app. Add a photo if you can.</p>
-        <p class="alt">Rather talk it through? <a href="tel:+18624000703">Call us</a></p>
+        <p class="note">Opens your messages app. Add a photo there if you can.</p>
+        <p class="alt" id="alt">Water coming in right now? Calling is fastest: <a href="tel:+18624000703">Call us</a></p>
         <div class="sent" id="sent" role="status" aria-live="polite">
-          <strong>Your message is ready.</strong> If your messages app didn't open, copy it and text it to (862) 400-0703.
+          <strong>Your message is ready.</strong> If your messages app didn't open, copy it and text it to (862) 400-0703, or <a href="tel:+18624000703">call us</a>.
           <pre id="msg"></pre>
           <button class="btn btn-copy" type="button" id="copy">Copy message</button>
         </div>
@@ -304,18 +310,18 @@ seed: c51b7d90
   <div class="wrap">
     <blockquote>When it comes to your home, quality shouldn't be a luxury. It should be the standard.</blockquote>
     <div>
-      <p class="area">Serving all of New Jersey, day or night.</p>
-      <a class="big" href="tel:+18624000703"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>(862) 400-0703</a>
+      <a class="big" href="tel:+18624000703"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span class="num">(862) 400-0703</span></a>
       <p class="free">Call 24/7. Free estimates.</p>
     </div>
   </div>
 </section>
 
+</main>
+
 <footer>
   <div class="wrap">
     <b>Residential Plumbing</b>
     <span>Serving all of New Jersey · Open 24/7</span>
-    <a href="tel:+18624000703">(862) 400-0703</a>
   </div>
 </footer>
 
@@ -331,7 +337,8 @@ var CFG = {
   GRAVITY: 0.32,
   STIR: 0.11,           // how hard a finger/mouse pushes the water
   PUSH_R: 70,           // bubble push radius
-  SEAM_SPEED: 1.9
+  SEAM_SPEED: 1.9,
+  VALVE_HINT: 7         // seconds between the valve's little wiggle until someone taps it
 };
 var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -355,7 +362,7 @@ var Loop = (function(){
   var cv = document.getElementById('water'), ctx = cv.getContext('2d');
   var pool = document.getElementById('pool'), hero = cv.parentNode;
   var W=0, H=0, dpr=1, cols=[], N=0, bubbles=[], drops=[], spray=[], pops=[];
-  var valveOpen = true, valveAng = 0, lastDrip = 0, drip = null;
+  var valveOpen = true, touchedValve = false, valveAng = 0, lastDrip = 0, drip = null;
   var ptr = {x:-1e4, y:-1e4, cx:-1e4, cy:-1e4, px:0, py:0, vx:0, vy:0, on:false};
   var geo = {};
   var bubbleSprites = [];
@@ -451,7 +458,7 @@ var Loop = (function(){
       if (!drip.falling){ drip.r += .09*k; if (drip.r > 4.2) drip.falling = true; }
       else { drip.vy += CFG.GRAVITY*k; drip.y += drip.vy*k;
         var sY = surfaceAt(geo.elbowX, t);
-        if (drip.y >= sY){ splash(geo.elbowX, sY, Math.min(9, 2.4 + drip.vy*.9)); drip = null; lastDrip = now; } }
+        if (drip.y >= sY){ splash(geo.elbowX, sY, Math.min(9, 2.4 + drip.vy*.9)); pops.push({x:geo.elbowX, r:6, life:1.4}); drip = null; lastDrip = now; } }
     }
     // spray
     for (var s=spray.length-1;s>=0;s--){ var q = spray[s]; q.vy += CFG.GRAVITY*.8*k; q.x += q.vx*k; q.y += q.vy*k;
@@ -472,7 +479,9 @@ var Loop = (function(){
     }
     for (var o=pops.length-1;o>=0;o--){ pops[o].life -= .08*k; pops[o].r += .35*k; if (pops[o].life<=0) pops.splice(o,1); }
     // valve handle eases toward its state
-    var target = valveOpen ? 0 : Math.PI/2; valveAng += (target - valveAng) * Math.min(1, .18*k);
+    var target = valveOpen ? 0 : Math.PI/2;
+    if (!touchedValve && valveOpen){ var ph = (t % CFG.VALVE_HINT) / CFG.VALVE_HINT; if (ph > .92) target = Math.sin((ph-.92)/.08*Math.PI*3) * .22; }
+    valveAng += (target - valveAng) * Math.min(1, .18*k);
     ptr.vx *= .8; ptr.vy *= .8;
   }
 
@@ -536,7 +545,7 @@ var Loop = (function(){
       ctx.drawImage(sp.c, u.x - u.r - 1/dpr, u.y - u.r - 1/dpr, sp.c.width/dpr, sp.c.height/dpr); }
     ctx.restore();
     // bubble pops on the surface
-    for (var o=0;o<pops.length;o++){ var pp = pops[o]; ctx.fillStyle = 'rgba(210,242,248,'+(pp.life*.5)+')';
+    for (var o=0;o<pops.length;o++){ var pp = pops[o]; ctx.fillStyle = 'rgba(210,242,248,'+(Math.min(1,pp.life)*.45)+')';
       ctx.beginPath(); ctx.ellipse(pp.x, surfaceAt(pp.x, t) + 1, pp.r*1.4, pp.r*.35, 0, 0, Math.PI*2); ctx.fill(); }
     drawPipe();
     // drip and spray
@@ -559,24 +568,25 @@ var Loop = (function(){
   hero.addEventListener('pointermove', move, {passive:true});
   hero.addEventListener('pointerdown', function(e){
     var r = cv.getBoundingClientRect(); ptr.px = e.clientX - r.left; ptr.py = e.clientY - r.top; move(e);
-    if (geo.valveHit && Math.hypot(ptr.px-geo.valveHit.x, ptr.py-geo.valveHit.y) < geo.valveHit.rad){ valveOpen = !valveOpen; lastDrip = performance.now(); }
+    if (geo.valveHit && Math.hypot(ptr.px-geo.valveHit.x, ptr.py-geo.valveHit.y) < geo.valveHit.rad){ valveOpen = !valveOpen; touchedValve = true; lastDrip = performance.now(); }
     else if (e.target === pool){ var sy = surfaceAt(ptr.px, T); if (ptr.py > sy - 30) splash(ptr.px, sy, 5); }
   }, {passive:true});
   hero.addEventListener('pointerleave', function(){ ptr.on = false; });
-  pool.addEventListener('pointerup', function(){ if (event.pointerType !== 'mouse') ptr.on = false; });
+  pool.addEventListener('pointerup', function(e){ if (e.pointerType !== 'mouse') ptr.on = false; });
   pool.addEventListener('pointercancel', function(){ ptr.on = false; });
   pool.addEventListener('dragstart', function(e){ e.preventDefault(); });
 
   var T = 0, visible = true;
   function resize(){ if (layout()) draw(T); }
   window.addEventListener('resize', resize, {passive:true});
+  if (window.ResizeObserver){ var ro = new ResizeObserver(resize); ro.observe(hero); ro.observe(pool); }
   layout(); for (var w=0; w<30; w++) step(T, 1); draw(T);
   if (reduced) return;
   var job = Loop.add(function(now, dt){
     if (!visible) return;
     var k = dt / 16.667; T += dt/1000;
     if (ptr.on){ var r = cv.getBoundingClientRect(), nx = ptr.cx - r.left, ny = ptr.cy - r.top; ptr.vx += (nx-ptr.px)*.5; ptr.vy += (ny-ptr.py)*.5; ptr.px = nx; ptr.py = ny; ptr.x = nx; ptr.y = ny; }
-    layout(); step(T, k); draw(T);
+    step(T, k); draw(T);
   });
   new IntersectionObserver(function(es){ visible = es[0].isIntersecting; job.active = visible; if (visible) Loop.wake(); }).observe(hero);
   Loop.wake();
@@ -636,8 +646,9 @@ var Loop = (function(){
 (function(){
   var form = document.getElementById('est'), NUM = '+18624000703';
   function val(n){ var el = form.querySelector('[name='+n+']:checked') || form.querySelector('[name='+n+']:not([type=radio])'); return el ? el.value.trim() : ''; }
-  function check(id, ok){ document.getElementById(id).classList.toggle('bad', !ok); return ok; }
-  form.addEventListener('change', function(e){ var f = e.target.closest('fieldset,div[id^=f-]'); if (f) f.classList.remove('bad'); });
+  function check(id, ok){ var el = document.getElementById(id); el.classList.toggle('bad', !ok); (el.matches('fieldset') ? el : el.querySelector('input')).setAttribute('aria-invalid', ok ? 'false' : 'true'); return ok; }
+  form.addEventListener('change', function(e){ var f = e.target.closest('fieldset,div[id^=f-]'); if (f) f.classList.remove('bad');
+    if (e.target.name === 'when') document.getElementById('alt').classList.toggle('on', e.target.value.indexOf('Right now') === 0); });
   form.addEventListener('input', function(e){ var f = e.target.closest('div[id^=f-]'); if (f && e.target.value.trim()) f.classList.remove('bad'); });
   form.addEventListener('submit', function(e){
     e.preventDefault();
