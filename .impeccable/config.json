@@ -29,6 +29,114 @@
         ],
         "createdAt": "2026-10-18T23:47:17.295Z",
         "reason": "builder: false positive; .wrap pads with max(var(--pad),env(safe-area-inset-*)) which the static parser can't resolve; 390/360/1440 screenshots show 20-40px gutters"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "5px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T23:51:14.158Z",
+        "reason": "builder: shipped value DESIGN.md (derived from this page) left out; intentional (pipe-coupling sleeves / focus ring)"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "6px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T23:51:14.235Z",
+        "reason": "builder: shipped value DESIGN.md (derived from this page) left out; intentional (pipe-coupling sleeves / focus ring)"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "3px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T23:51:14.312Z",
+        "reason": "builder: shipped value DESIGN.md (derived from this page) left out; intentional (pipe-coupling sleeves / focus ring)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "13px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T23:51:14.396Z",
+        "reason": "builder: shipped value DESIGN.md (derived from this page) left out; intentional (brand sub-line on small phones / closing number)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "14px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T23:51:14.471Z",
+        "reason": "builder: shipped value DESIGN.md (derived from this page) left out; intentional (brand sub-line on small phones / closing number)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "52px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T23:51:14.545Z",
+        "reason": "builder: shipped value DESIGN.md (derived from this page) left out; intentional (brand sub-line on small phones / closing number)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#6e3818",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T23:51:14.624Z",
+        "reason": "builder: shipped value DESIGN.md (derived from this page) left out; intentional (copper pipe gradient stops)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#c47a45",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T23:51:14.704Z",
+        "reason": "builder: shipped value DESIGN.md (derived from this page) left out; intentional (copper pipe gradient stops)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#f3c39a",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T23:51:14.776Z",
+        "reason": "builder: shipped value DESIGN.md (derived from this page) left out; intentional (copper pipe gradient stops)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#f6cba6",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T23:51:14.850Z",
+        "reason": "builder: shipped value DESIGN.md (derived from this page) left out; intentional (copper pipe gradient stops)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#a65d30",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T23:51:14.922Z",
+        "reason": "builder: shipped value DESIGN.md (derived from this page) left out; intentional (copper pipe gradient stops)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#5f7784",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T23:51:14.999Z",
+        "reason": "builder: shipped value DESIGN.md (derived from this page) left out; intentional (placeholder color raised to 4.7:1 per audit)"
       }
     ]
   }
